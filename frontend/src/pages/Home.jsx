@@ -31,7 +31,7 @@ const Home = ({ onHireMeClick }) => {
         { name: "Express.js", icon: Express, delay: 0.6 },
         { name: "MongoDB", icon: MongoDB, delay: 0.5 },
         { name: "Bootstrap", icon: Bootstrap, delay: 0 },
-        { name: "Github", icon: Github, delay: 0.1 },
+        { name: "Github", icon: GitHub, delay: 0.1 },
         { name: "C++", icon: cpp, delay: 0.2 },
         { name: "Python", icon: Python, delay: 0.3 },
         { name: "n8n", icon: n8n, delay: 0.8 },
