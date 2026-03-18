@@ -15,7 +15,7 @@ import cpp from '../assets/icon/cpp.svg';
 import Python from '../assets/icon/Python.svg';
 import Node from '../assets/icon/Node.svg';
 import MongoDB from '../assets/icon/MongoDB.svg';
-import Express from '../assets/icon/express.svg';
+import Express from '../assets/icon/Express.svg';
 import React from '../assets/icon/React.svg';
 import n8n from '../assets/icon/n8n.svg';
 
