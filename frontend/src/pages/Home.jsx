@@ -10,7 +10,7 @@ import Magnetic from '../components/Magnetic';
 import TechBackground from '../components/TechBackground';
 // imported icons below
 import Bootstrap from '../assets/icon/Bootstrap.svg';
-import Github from '../assets/icon/Github.svg';
+import GitHub from '../assets/icon/GitHub.svg';
 import cpp from '../assets/icon/cpp.svg';
 import Python from '../assets/icon/Python.svg';
 import Node from '../assets/icon/Node.svg';
