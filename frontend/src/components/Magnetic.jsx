@@ -1,38 +1,11 @@
-import { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
+import '../styles/Magnetic.css';
 
-const Magnetic = ({ children, strength = 0.5 }) => {
-    const ref = useRef(null);
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-
-    const handleMouseMove = (e) => {
-        const { clientX, clientY } = e;
-        const { left, top, width, height } = ref.current.getBoundingClientRect();
-
-        const centerX = left + width / 2;
-        const centerY = top + height / 2;
-
-        const x = (clientX - centerX) * strength;
-        const y = (clientY - centerY) * strength;
-
-        setPosition({ x, y });
-    };
-
-    const handleMouseLeave = () => {
-        setPosition({ x: 0, y: 0 });
-    };
-
+const Magnetic = ({ children }) => {
     return (
-        <motion.div
-            ref={ref}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            animate={{ x: position.x, y: position.y }}
-            transition={{ type: "spring", stiffness: 80, damping: 20, mass: 0.05 }}
-            className="inline-block"
-        >
+        <div className="magnetic-wrapper">
             {children}
-        </motion.div>
+        </div>
     );
 };
 

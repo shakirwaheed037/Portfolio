@@ -1,0 +1,197 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(2, 6, 23, 0.8); /* slate-950/80 */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 32rem; /* max-w-lg */
+  background-color: #0f172a; /* slate-900 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem; /* rounded-3xl */
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: fadeUpAnim 0.3s ease-out; /* Slight pop-in animation */
+}
+
+.modal-header {
+  position: relative;
+  height: 8rem; /* h-32 */
+  background-color: rgba(0, 123, 255, 0.1); /* primary/10 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.modal-header-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0, 123, 255, 0.2), transparent);
+}
+
+.modal-header-text-container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.modal-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.modal-close-btn:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.modal-form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* space-y-5 */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space-y-2 */
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d1d5db; /* gray-300 */
+  margin-left: 0.25rem;
+}
+
+.form-label-icon {
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+.form-input {
+  width: 100%;
+  background-color: #020617; /* slate-950 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem; /* rounded-xl */
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+textarea.form-input {
+  resize: none;
+}
+
+.form-status {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.form-status.success {
+  background-color: rgba(34, 197, 94, 0.1); /* green-500/10 */
+  color: #4ade80; /* green-400 */
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.form-status.error {
+  background-color: rgba(239, 68, 68, 0.1); /* red-500/10 */
+  color: #f87171; /* red-400 */
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.form-submit-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+  font-weight: 700;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.75rem; /* rounded-xl */
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+  box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-submit-btn:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.form-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

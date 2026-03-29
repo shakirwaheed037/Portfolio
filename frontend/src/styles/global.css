@@ -1,0 +1,155 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --bg-color: #0b0f16;
+  --bg-gradient: radial-gradient(circle at 10% 20%, rgba(0, 123, 255, 0.1) 0%, #0b0f16 40%),
+                 radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.1) 0%, #080c12 50%);
+  background-attachment: fixed;
+  --primary-color: #007BFF;
+  --primary-hover: #0056b3;
+  --card-bg: #161d2b;
+  --border-color: #2e3b52;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af; /* Tailwind text-gray-400 equivalent */
+  --text-muted: #6b7280;     /* Tailwind text-gray-500 equivalent */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --backdrop-bg: rgba(21, 28, 39, 0.8);
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-full: 9999px;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+}
+
+html {
+  font-family: var(--font-family);
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--bg-gradient);
+}
+
+::selection {
+  background-color: rgba(0, 123, 255, 0.3);
+  color: var(--primary-color);
+}
+
+/* Common Utilities replacing standard Tailwind constructs */
+.app-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.glass-effect {
+  background-color: var(--backdrop-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+}
+
+button, .btn-link, .home__btn-primary, .home__btn-secondary, .about__breadcrumb-link, .experience__hero-btn, .experience__timeline-card-flare {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover, .btn-link:hover, .home__btn-primary:hover, .home__btn-secondary:hover, .experience__hero-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 25px -5px rgba(0, 123, 255, 0.4);
+}
+
+button:active, .btn-link:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Print Optimization for CV Download */
+@media print {
+  nav, 
+  footer, 
+  .no-print,
+  button,
+  .inline-flex,
+  .Magnetic,
+  #cv-preview-container ~ *, 
+  .breadcrumbs {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  #cv-preview-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    z-index: 9999 !important;
+  }
+
+  .min-h-screen, .pt-24, .pb-20, h1, p, .pt-8 {
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+
+  main > div > div:has(#cv-preview-container), main, #root, html {
+    display: block !important;
+    overflow: visible !important;
+    background: white !important;
+  }
+
+  #cv-preview-container {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+  }
+
+  #cv-preview-container * {
+    visibility: visible !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

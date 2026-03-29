@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from "framer-motion";
 import ProjectCard from '../components/ProjectCard';
 import reacttodoapp from "../assets/projects/reacttodoapp.jpg";
 import reactcalculater from "../assets/projects/reactcalculater.jpg";
@@ -11,6 +10,7 @@ import movieapp from "../assets/projects/movieapp.png";
 import { Search, ExternalLink, Github, ChevronDown, Server, Layout, GitMerge, MessageSquare, Activity, Workflow, CheckSquare, Calculator, Clock, Link, Film } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import Magnetic from '../components/Magnetic';
+import '../styles/Projects.css';
 
 const Projects = () => {
     const [filter, setFilter] = useState('All');
@@ -92,7 +92,6 @@ const Projects = () => {
             iconColor: "text-emerald-500",
             image: movieapp,
             githubUrl: "https://github.com/shakirwaheed037/Movie-App"
-
         }
     ];
 
@@ -107,59 +106,44 @@ const Projects = () => {
     });
 
     return (
-        <div className="min-h-screen flex flex-col font-sans">
-            <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex-grow">
+        <div className="projects-page">
+            <div className="projects-page__container">
                 {/* Header Section */}
-                <AnimatedSection className="mb-16">
-                    <div className="inline-flex items-center px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-8">
-                        <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
-                        <span className="text-primary text-[10px] font-bold tracking-widest uppercase">Portfolio 2024 Showcase</span>
+                <AnimatedSection className="projects__header">
+                    <div className="projects__header-badge hover-scale">
+                        <div className="projects__header-badge-dot"></div>
+                        <span className="projects__header-badge-text">Portfolio 2024 Showcase</span>
                     </div>
 
-                    <h1 className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-white mb-6 tracking-tight">
+                    <h1 className="projects__header-title">
                         Projects <span className="text-primary">Gallery</span>
                     </h1>
 
-                    <p className="text-lg text-gray-400 max-w-2xl leading-relaxed">
+                    <p className="projects__header-desc">
                         A curated collection of full-stack applications, interactive interfaces, and intelligent automation workflows, showcasing both creativity and technical depth.
                     </p>
                 </AnimatedSection>
 
                 {/* Filters and Search */}
-                <AnimatedSection delay={0.1} className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
-                    <div className="flex bg-[#161d2b] rounded-full p-1.5 border border-white/5 overflow-x-auto max-w-full hide-scrollbar">
+                <AnimatedSection className="projects__filters-container">
+                    <div className="projects__filters-scroll">
                         {filters.map((f) => (
                             <button
                                 key={f}
                                 onClick={() => setFilter(f)}
-                                className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-2 ${filter === f
-                                    ? 'bg-primary text-white shadow-lg shadow-primary/20'
-                                    : 'text-gray-400 hover:text-white hover:bg-white/5'
-                                    }`}
+                                className={`projects__filter-btn ${filter === f ? 'projects__filter-btn--active' : ''}`}
                             >
                                 {f}
                                 {f === 'n8n' && (
-                                    <div className={`w-2 h-2 rounded-full ${filter === f ? 'bg-white' : 'bg-emerald-500'}`}></div>
+                                    <div className={`projects__filter-dot ${filter === f ? 'projects__filter-dot--active' : 'projects__filter-dot--inactive'}`}></div>
                                 )}
                             </button>
                         ))}
                     </div>
-
-                    {/* search bar of the project */}
-                    {/* <div className="relative w-full md:w-80">
-                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <Search className="h-4 w-4 text-gray-500" />
-                        </div>
-                        <input
-                            type="text"
-                            placeholder="Search projects..."
-                            className="w-full bg-[#161d2b] border border-white/5 rounded-full pl-11 pr-4 py-3.5 text-sm text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder-gray-500"
-                        />
-                    </div> */}
                 </AnimatedSection>
 
                 {/* Projects Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+                <div className="projects__grid">
                     {filteredProjects.map((project, index) => (
                         <ProjectCard
                             key={project.id}
@@ -170,22 +154,22 @@ const Projects = () => {
                             image={project.image}
                             demoUrl="#"
                             githubUrl={project.githubUrl}
-                            direction={index % 2 === 0 ? "up" : "down"}
+                            direction={index % 2 === 0 ? "left" : "right"}
                         />
                     ))}
                 </div>
 
                 {/* Footer Actions */}
-                <AnimatedSection delay={0.3} className="flex flex-col items-center justify-center text-center pb-12">
+                <AnimatedSection className="projects__actions">
                     <Magnetic>
-                        <button className="flex items-center gap-2 bg-[#161d2b] hover:bg-white/5 border border-white/5 text-white px-6 py-3.5 rounded-full text-sm font-semibold transition-colors mb-10 w-full sm:w-auto justify-center">
+                        <button className="projects__explore-btn">
                             Explore All Projects
-                            <ChevronDown className="w-4 h-4 text-gray-400" />
+                            <ChevronDown className="projects__explore-icon" />
                         </button>
                     </Magnetic>
 
-                    <p className="text-sm text-gray-400 mb-3">Looking for more? Explore the full source code archive.</p>
-                    <a href="https://github.com/shakirwaheed037" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary text-sm font-semibold hover:text-blue-400 transition-colors">
+                    <p className="projects__actions-text">Looking for more? Explore the full source code archive.</p>
+                    <a href="https://github.com/shakirwaheed037" target="_blank" rel="noopener noreferrer" className="projects__github-link">
                         <Github className="w-4 h-4" /> Visit GitHub Repository &rarr;
                     </a>
                 </AnimatedSection>
