@@ -3,6 +3,7 @@ import ProjectCard from '../components/ProjectCard';
 import reacttodoapp from "../assets/projects/reacttodoapp.jpg";
 import reactcalculater from "../assets/projects/reactcalculater.jpg";
 import agecalculater from "../assets/projects/agecalculater.jpg";
+import fyp from "../assets/projects/fyp.png";
 import Techcourses from "../assets/projects/Techcourses.jpg";
 import hostpital from "../assets/projects/hostpital.png";
 import urlshortener from "../assets/projects/urlshortener.png";
@@ -10,22 +11,26 @@ import movieapp from "../assets/projects/movieapp.png";
 import { Search, ExternalLink, Github, ChevronDown, Server, Layout, GitMerge, MessageSquare, Activity, Workflow, CheckSquare, Calculator, Clock, Link, Film } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import Magnetic from '../components/Magnetic';
+
 import '../styles/Projects.css';
 
 const Projects = () => {
     const [filter, setFilter] = useState('All');
 
     const projects = [
-        {
+      
+          {
             id: 1,
-            title: "React Todo App",
-            description: "A simple React task manager where users can add, delete, and manage daily tasks using dynamic state updates.",
-            badges: ["REACT", "FRONTEND"],
-            footerText: "React.js",
+            title: "Interns-Portal",
+            description: "Interns Portal is a full-stack internship management web application designed to connect students, companies, and administrators on a single platform. It allows students to apply for internships, companies to post opportunities, and admins to manage the entire system efficiently.",
+            badges: ["FRONTEND", "BACKEND"],
+            footerText: "MERN Stack",
             footerIcon: CheckSquare,
             iconColor: "text-blue-500",
-            image: reacttodoapp,
-            githubUrl: "https://github.com/shakirwaheed037/Todo-app-with-react.js"
+            image: fyp,
+            githubUrl: "https://github.com/shakirwaheed037/interns.git",
+            liveUrl: "https://interns-manag.vercel.app/"
+
         },
         {
             id: 2,
@@ -92,6 +97,17 @@ const Projects = () => {
             iconColor: "text-emerald-500",
             image: movieapp,
             githubUrl: "https://github.com/shakirwaheed037/Movie-App"
+        },
+          {
+            id: 8,
+            title: "React Todo App",
+            description: "A simple React task manager where users can add, delete, and manage daily tasks using dynamic state updates.",
+            badges: ["REACT", "FRONTEND"],
+            footerText: "React.js",
+            footerIcon: CheckSquare,
+            iconColor: "text-blue-500",
+            image: reacttodoapp,
+            githubUrl: "https://github.com/shakirwaheed037/Todo-app-with-react.js"
         }
     ];
 
