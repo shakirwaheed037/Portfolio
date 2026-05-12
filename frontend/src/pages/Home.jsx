@@ -276,6 +276,16 @@ const Home = ({ onHireMeClick }) => {
                             <p className="home__achievement-badge">FROM KUST UNIVERSITY</p>
                             <p className="home__achievement-desc">Bachelor of Science of Computer Science</p>
                         </div>
+
+                          <div className="home__achievement-card hover-scale">
+                            <div className="home__achievement-icon-wrapper">
+                                <div className="home__achievement-icon2"></div>
+                            </div>
+                            <h3 className="home__achievement-title">Achived PM Laptop</h3>
+                            <p className="home__achievement-badge">From KUST UNIVERSITY</p>
+                            <p className="home__achievement-desc">Bachelor of Science of Computer Science</p>
+                        </div>
+                        
                     </div>
 
                     <Link to="/achievements">

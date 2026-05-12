@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import pscodercertificate from '../assets/certificates/pscodercertificate.jpg'
-import courserabootstrap from '../assets/certificates/courserabootstrap.jpg'
-import courseragithub from '../assets/certificates/courseragithub.jpg'
-import courseraintrohtmlcssjs from '../assets/certificates/courseraintrohtmlcssjs.jpg'
 import DEP from '../assets/certificates/DEP.jpg'
+import freelancing from '../assets/certificates/freelancing.png'
+import wordpress from '../assets/certificates/wordpress.png'
 import courserareact from '../assets/certificates/courserareact.jpg'
+import laptop from '../assets/images/laptop.png'
 import AnimatedSection from '../components/AnimatedSection';
 import Magnetic from '../components/Magnetic';
 import '../styles/Achievements.css';
@@ -37,23 +37,23 @@ const Achievements = () => {
         },
         {
             id: 3,
-            title: "Bootstrap 5 ",
-            issuer: "Coursera",
-            date: "Jun 2023",
-            badge: "Coursera IBM",
-            category: "Frontend",
-            image: courserabootstrap,
-            link: courserabootstrap
+            title: "Freelancing ",
+            issuer: "DigiSkills",
+            date: "Nov 2025",
+            badge: "DigiSkills.pk",
+            category: "Freelancer",
+            image: freelancing,
+            link: freelancing
         },
         {
             id: 4,
-            title: "Git & GitHub Workflow",
-            issuer: "Coursera",
-            date: "31st May 2025",
-            badge: "Coursera IBM",
+            title: "WordPress",
+            issuer: "DigiSkills",
+            date: "Nov 2025",
+            badge: "DigiSkills.pk",
             category: "Frontend",
-            image: courseragithub,
-            link: courseragithub
+            image: wordpress,
+            link: wordpress
         },
         {
             id: 5,
@@ -77,14 +77,15 @@ const Achievements = () => {
         },
         {
             id: 7,
-            title: "HTML & CSS & JavaScript",
-            issuer: "Coursera",
-            date: "4th May 2025",
-            badge: "IBM",
-            category: "Frontend",
-            image: courseraintrohtmlcssjs,
-            link: courseraintrohtmlcssjs
-        }
+            title: "Achived PM Laptop",
+            issuer: "Prime Minister",
+            date: "2025",
+            badge: "KUST UNIVERSITY",
+            category: "CS Graduate",
+            image: laptop,
+            link: laptop
+        },
+      
     ];
 
     const categories = ["All Categories", "Frontend", "Backend", "N8N Automation", "Data Analytics"];
