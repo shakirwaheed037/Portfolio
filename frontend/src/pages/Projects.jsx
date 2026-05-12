@@ -168,7 +168,7 @@ const Projects = () => {
                             description={project.description}
                             tags={project.badges}
                             image={project.image}
-                            demoUrl="#"
+                            demoUrl={project.liveUrl || "#"}
                             githubUrl={project.githubUrl}
                             direction={index % 2 === 0 ? "left" : "right"}
                         />
