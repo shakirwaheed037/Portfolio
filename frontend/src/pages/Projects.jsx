@@ -8,7 +8,8 @@ import Techcourses from "../assets/projects/Techcourses.jpg";
 import hostpital from "../assets/projects/hostpital.png";
 import urlshortener from "../assets/projects/urlshortener.png";
 import movieapp from "../assets/projects/movieapp.png";
-import { Search, ExternalLink, Github, ChevronDown, Server, Layout, GitMerge, MessageSquare, Activity, Workflow, CheckSquare, Calculator, Clock, Link, Film } from 'lucide-react';
+import SmartEstate from "../assets/projects/SmartEstate.png"
+import { Search, ExternalLink, Github, ChevronDown, Server, Layout, GitMerge, MessageSquare,Building, Activity, Workflow, CheckSquare, Calculator, Clock, Link, Film } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import Magnetic from '../components/Magnetic';
 
@@ -34,28 +35,19 @@ const Projects = () => {
         },
         {
             id: 2,
-            title: "React Calculator",
-            description: "A responsive calculator built with React that performs basic arithmetic operations using dynamic state handling.",
-            badges: ["REACT", "FRONTEND"],
-            footerText: "React.js",
-            footerIcon: Calculator,
+            title: "SmartEstate AI – Intelligent Real Estate Platform",
+            description: "A production-ready full-stack real estate platform built with Next.js, MongoDB, and Tailwind CSS. It enables users to buy, rent, and manage properties through intelligent search, verified listings, role-based dashboards, appointment booking, and responsive user experiences.",
+            badges: ["NEXT.js" , "Frontend", "Backend"],
+            footerText: "NEXT.js",
+            footerIcon: Building,
             iconColor: "text-blue-500",
-            image: reactcalculater,
-            githubUrl: "https://github.com/shakirwaheed037/React-Calculator"
+            image: SmartEstate,
+            githubUrl: "https://github.com/shakirwaheed037/SmartEstate-AI-Intelligent-Real-Estate-Platform.git",
+            liveUrl: "https://smart-estate-ai-platform.vercel.app/"
         },
+       
         {
             id: 3,
-            title: "Advanced Age Calculator",
-            description: "A React application that calculates age in years, months, days, and hours with accurate input validation.",
-            badges: ["REACT", "FRONTEND"],
-            footerText: "React.js",
-            footerIcon: Clock,
-            iconColor: "text-emerald-500",
-            image: agecalculater,
-            githubUrl: "https://github.com/shakirwaheed037/Age-Calculater"
-        },
-        {
-            id: 4,
             title: "Tech Courses Web Platform",
             description: "A full-stack course platform with authentication, role-based access, course management, and image uploads.",
             badges: ["MERN", "BACKEND"],
@@ -66,7 +58,7 @@ const Projects = () => {
             githubUrl: "https://github.com/shakirwaheed037/Tech-Courses-Web-Platform"
         },
         {
-            id: 5,
+            id: 4,
             title: "Hospital Appointment Management Web",
             description: "A responsive hospital website where patients can view doctors and schedule appointments easily.",
             badges: ["FRONTEND", "BOOTSTRAP"],
@@ -77,7 +69,7 @@ const Projects = () => {
             githubUrl: "https://github.com/shakirwaheed037/hospitalManagementWebsite"
         },
         {
-            id: 6,
+            id: 5,
             title: "URL Shortener",
             description: "A MERN-based tool that converts long URLs into short links with copy functionality and click tracking.",
             badges: ["MERN", "API", "BACKEND"],
@@ -86,6 +78,17 @@ const Projects = () => {
             iconColor: "text-emerald-500",
             image: urlshortener,
             githubUrl: "https://github.com/shakirwaheed037/URL-Shortener"
+        },
+         {
+            id: 6,
+            title: "Advanced Age Calculator",
+            description: "A React application that calculates age in years, months, days, and hours with accurate input validation.",
+            badges: ["REACT", "FRONTEND"],
+            footerText: "React.js",
+            footerIcon: Clock,
+            iconColor: "text-emerald-500",
+            image: agecalculater,
+            githubUrl: "https://github.com/shakirwaheed037/Age-Calculater"
         },
         {
             id: 7,
@@ -108,6 +111,17 @@ const Projects = () => {
             iconColor: "text-blue-500",
             image: reacttodoapp,
             githubUrl: "https://github.com/shakirwaheed037/Todo-app-with-react.js"
+        },
+        {
+            id: 9,
+            title: "React Calculator",
+            description: "A responsive calculator built with React that performs basic arithmetic operations using dynamic state handling.",
+            badges: ["REACT", "FRONTEND"],
+            footerText: "React.js",
+            footerIcon: Calculator,
+            iconColor: "text-blue-500",
+            image: reactcalculater,
+            githubUrl: "https://github.com/shakirwaheed037/React-Calculator"
         }
     ];
 

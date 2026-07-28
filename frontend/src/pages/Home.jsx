@@ -4,8 +4,8 @@ import AnimatedSection from '../components/AnimatedSection';
 import Achievements from "../pages/Achievements.jsx";
 import myimage from '../assets/images/myimage.png';
 import Techcourses from '../assets/projects/Techcourses.jpg';
-import movieapp from '../assets/projects/movieapp.png';
-import hostpital from '../assets/projects/hostpital.png';
+import movieapp from '../assets/projects/SmartEstate.png';
+import hostpital from '../assets/projects/fyp.png';
 import Magnetic from '../components/Magnetic';
 import TechBackground from '../components/TechBackground';
 // imported icons below
@@ -143,11 +143,11 @@ const Home = ({ onHireMeClick }) => {
 
                             <div className="home__stats-grid">
                                 <div className="home__stat-card">
-                                    <div className="home__stat-number">50+</div>
+                                    <div className="home__stat-number">10+</div>
                                     <div className="home__stat-label">Projects Completed</div>
                                 </div>
                                 <div className="home__stat-card">
-                                    <div className="home__stat-number">12+</div>
+                                    <div className="home__stat-number">5+</div>
                                     <div className="home__stat-label">Global Clients</div>
                                 </div>
                             </div>
@@ -182,7 +182,47 @@ const Home = ({ onHireMeClick }) => {
                     </div>
 
                     <div className="home__projects-grid">
+
                         {/* Project 1 */}
+                        <div className="home__project-card hover-scale">
+                            <div className="home__project-image home__project-image--bg2">
+                                <div className="home__project-dashbg">
+                                    <img
+                                        src={SmartEstate}
+                                        alt="SmartEstate image"
+                                    />
+                                </div>
+                            </div>
+                            <div className="home__project-content">
+                                <div className="home__project-tags">
+                                    <span className="home__project-tag home__project-tag--primary">Next.js</span>
+                                    <span className="home__project-tag home__project-tag--secondary">API</span>
+                                </div>
+                                <h3 className="home__project-title">SmartEstate AI – Intelligent Real Estate Platform</h3>
+                                <p className="home__project-desc">Built a production-ready full-stack real estate platform using Next.js, MongoDB, Tailwind CSS, and Auth.js.</p>
+                            </div>
+                        </div>
+
+                        {/* Project 2 */}
+                        <div className="home__project-card hover-scale">
+                            <div className="home__project-image home__project-image--bg3">
+                                <div className="home__project-orb">
+                                    <img
+                                        src={fyp}
+                                        alt="hostpital image"
+                                    />
+                                </div>
+                            </div>
+                            <div className="home__project-content">
+                                <div className="home__project-tags">
+                                    <span className="home__project-tag home__project-tag--primary">MERN Stack</span>
+                                    <span className="home__project-tag home__project-tag--secondary">Interns Portal</span>
+                                </div>
+                                <h3 className="home__project-title">Interns: An Online Internshpip Management & Placement System</h3>
+                                <p className="home__project-desc">Interns Portal is a full-stack internship management web application designed to connect students, companies, and administrators on a single platform.</p>
+                            </div>
+                        </div>
+                        {/* Project 3*/}
                         <div className="home__project-card hover-scale">
                             <div className="home__project-image home__project-image--bg1">
                                 <div className="home__project-image-gradient"></div>
@@ -198,46 +238,6 @@ const Home = ({ onHireMeClick }) => {
                                 </div>
                                 <h3 className="home__project-title">Tech Courses Web Platform</h3>
                                 <p className="home__project-desc">A full-stack course platform with authentication, role-based access, course management, and image uploads.</p>
-                            </div>
-                        </div>
-
-                        {/* Project 2 */}
-                        <div className="home__project-card hover-scale">
-                            <div className="home__project-image home__project-image--bg2">
-                                <div className="home__project-dashbg">
-                                    <img
-                                        src={movieapp}
-                                        alt="movieapp image"
-                                    />
-                                </div>
-                            </div>
-                            <div className="home__project-content">
-                                <div className="home__project-tags">
-                                    <span className="home__project-tag home__project-tag--primary">REACT</span>
-                                    <span className="home__project-tag home__project-tag--secondary">API</span>
-                                </div>
-                                <h3 className="home__project-title">Movie Search App</h3>
-                                <p className="home__project-desc">A React movie explorer that fetches data from a movie API to search, view details, and save favorites.</p>
-                            </div>
-                        </div>
-
-                        {/* Project 3 */}
-                        <div className="home__project-card hover-scale">
-                            <div className="home__project-image home__project-image--bg3">
-                                <div className="home__project-orb">
-                                    <img
-                                        src={hostpital}
-                                        alt="hostpital image"
-                                    />
-                                </div>
-                            </div>
-                            <div className="home__project-content">
-                                <div className="home__project-tags">
-                                    <span className="home__project-tag home__project-tag--primary">BOOTSTRAP 5</span>
-                                    <span className="home__project-tag home__project-tag--secondary">HEALTH</span>
-                                </div>
-                                <h3 className="home__project-title">Hospital Appointment Management Web</h3>
-                                <p className="home__project-desc">A responsive hospital website where patients can view doctors and schedule appointments easily.</p>
                             </div>
                         </div>
                     </div>
@@ -256,7 +256,7 @@ const Home = ({ onHireMeClick }) => {
                             </div>
                             <h3 className="home__achievement-title">MERN Stack</h3>
                             <p className="home__achievement-badge">CERTIFIED</p>
-                            <p className="home__achievement-desc">Certified Professional at React Development</p>
+                            <p className="home__achievement-desc">Certified Professional at React & NEXT.js Development</p>
                         </div>
 
                         <div className="home__achievement-card hover-scale">
@@ -308,24 +308,32 @@ const Home = ({ onHireMeClick }) => {
                             <div className="home__service-icon-wrapper">
                                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             </div>
-                            <h3 className="home__service-title">Frontend Engineering</h3>
-                            <p className="home__service-desc">I build responsive, modern, and user-friendly websites using HTML, CSS, JavaScript, and Responsive React interfaces with clean, intuitive UX.</p>
+                            <h3 className="home__service-title">💻 Frontend Engineering</h3>
+                            <p className="home__service-desc">I build modern, responsive, and user-friendly web applications using React.js, Next.js, Tailwind CSS, and JavaScript with a focus on performance and great user experience.</p>
                         </div>
 
                         <div className="home__service-card home__service-card--offset hover-scale">
                             <div className="home__service-icon-wrapper">
                                 <span className="home__service-icon-text">{"{ }"}</span>
                             </div>
-                            <h3 className="home__service-title">Backend Development</h3>
-                            <p className="home__service-desc">I develop secure, scalable APIs and web apps using Node.js, Express, and MongoDB. Secure and scalable server-side logic.</p>
+                            <h3 className="home__service-title">⚙️ Backend Development</h3>
+                            <p className="home__service-desc">I develop secure backend systems, REST APIs, authentication, and database-driven applications using Node.js, Express.js, and MongoDB.</p>
                         </div>
 
                         <div className="home__service-card hover-scale">
                             <div className="home__service-icon-wrapper">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
                             </div>
-                            <h3 className="home__service-title">UI/UX Strategy</h3>
-                            <p className="home__service-desc">User-centric design systems that bridge the gap between complex functionality and seamless ergonomics.</p>
+                            <h3 className="home__service-title">📊 Data Analytics</h3>
+                            <p className="home__service-desc">Transforming business data into clear insights through dashboards, reports, and visualizations using Excel, Power BI, and analytics techniques.</p>
+                        </div>
+
+                         <div className="home__service-card hover-scale">
+                            <div className="home__service-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+                            </div>
+                            <h3 className="home__service-title">🤖 AI Automation</h3>
+                            <p className="home__service-desc">Designing intelligent automation workflows that connect applications, automate repetitive processes, and improve business efficiency using AI-powered tools like N8n.</p>
                         </div>
                     </div>
                 </AnimatedSection>
@@ -347,7 +355,7 @@ const Home = ({ onHireMeClick }) => {
                                 <input
                                     type="text"
                                     className="home__contact-input"
-                                    placeholder="John Doe"
+                                    placeholder="Shakir Waheed"
                                     required
                                 />
                             </div>
@@ -356,7 +364,7 @@ const Home = ({ onHireMeClick }) => {
                                 <input
                                     type="email"
                                     className="home__contact-input"
-                                    placeholder="john@example.com"
+                                    placeholder="cbs@gmail.com"
                                     required
                                 />
                             </div>
