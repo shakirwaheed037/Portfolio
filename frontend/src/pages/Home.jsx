@@ -4,8 +4,8 @@ import AnimatedSection from '../components/AnimatedSection';
 import Achievements from "../pages/Achievements.jsx";
 import myimage from '../assets/images/myimage.png';
 import Techcourses from '../assets/projects/Techcourses.jpg';
-import movieapp from '../assets/projects/SmartEstate.png';
-import hostpital from '../assets/projects/fyp.png';
+import SmartEstate from '../assets/projects/SmartEstate.png';
+import fyp from '../assets/projects/fyp.png';
 import Magnetic from '../components/Magnetic';
 import TechBackground from '../components/TechBackground';
 // imported icons below
@@ -189,7 +189,7 @@ const Home = ({ onHireMeClick }) => {
                                 <div className="home__project-dashbg">
                                     <img
                                         src={SmartEstate}
-                                        alt="SmartEstate image"
+                                        alt="SmartEstate ai propery website image"
                                     />
                                 </div>
                             </div>
@@ -209,7 +209,7 @@ const Home = ({ onHireMeClick }) => {
                                 <div className="home__project-orb">
                                     <img
                                         src={fyp}
-                                        alt="hostpital image"
+                                        alt="interns platform"
                                     />
                                 </div>
                             </div>
