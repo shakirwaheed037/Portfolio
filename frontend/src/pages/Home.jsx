@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 import Achievements from "../pages/Achievements.jsx";
 import myimage from '../assets/images/myimage.png';
-import Techcourses from '../assets/projects/Techcourses.jpg';
 import SmartEstate from '../assets/projects/SmartEstate.png';
+import smartshop from '../assets/projects/smartshop.png';
 import fyp from '../assets/projects/fyp.png';
 import Magnetic from '../components/Magnetic';
 import TechBackground from '../components/TechBackground';
@@ -227,7 +227,7 @@ const Home = ({ onHireMeClick }) => {
                             <div className="home__project-image home__project-image--bg1">
                                 <div className="home__project-image-gradient"></div>
                                 <img
-                                    src={Techcourses}
+                                    src={smartshop}
                                     alt="techcourses web platform image"
                                 />
                             </div>
@@ -236,8 +236,8 @@ const Home = ({ onHireMeClick }) => {
                                     <span className="home__project-tag home__project-tag--primary">React</span>
                                     <span className="home__project-tag home__project-tag--secondary">Node</span>
                                 </div>
-                                <h3 className="home__project-title">Tech Courses Web Platform</h3>
-                                <p className="home__project-desc">A full-stack course platform with authentication, role-based access, course management, and image uploads.</p>
+                                <h3 className="home__project-title">Smart Shopkeeper:Digital Khata & Credit Management System</h3>
+                                <p className="home__project-desc">Developed a modern solution to replace manual notebook-based Khata management with a digital platform for wholesale and retail shopkeepers. The application simplifies customer credit records, billing, invoices, payments, and reminder management through a clean, responsive SaaS interface.</p>
                             </div>
                         </div>
                     </div>

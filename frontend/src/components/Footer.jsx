@@ -39,7 +39,7 @@ const Footer = () => {
 
                 <div className="footer__bottom">
                     <p className="footer__copyright">
-                        &copy; 2026 CodeByShakir. All rights reserved.
+                        &copy; 2024-2026 CodeByShakir. All rights reserved.
                     </p>
                     <div className="footer__legal">
                         <Link to="#" className="footer__legal-link">Privacy Policy</Link>
