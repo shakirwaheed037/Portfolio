@@ -432,7 +432,6 @@
 .home__project-card:hover { border-color: rgba(255, 255, 255, 0.2); transform: translateY(-4px); }
 
 .home__project-image {
-  aspect-ratio: 4/3;
   position: relative;
   overflow: hidden;
 }
@@ -440,14 +439,11 @@
 .home__project-image--bg2 { background-color: #1a2c2b; display: flex; align-items: center; justify-content: center; }
 .home__project-image--bg3 { background-color: #161616; display: flex; align-items: center; justify-content: center; }
 
-.home__project-image-gradient {
-  position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(31, 41, 55, 0.5), rgba(17, 24, 39, 0.5));
-}
+
 .home__project-image img { width: 100%; height: 100%; object-fit: cover; }
 .home__project-dashbg {
-  width: 80%; height: 60%; border: 1px solid rgba(20, 184, 166, 0.3); border-radius: 0.25rem; background-color: rgba(19, 78, 74, 0.1); display: flex;
+  width: 100%; height: 100%; border: 1px solid rgba(20, 184, 166, 0.3); border-radius: 0.25rem; background-color: rgba(19, 78, 74, 0.1); display: flex;
 }
-.home__project-orb { width: 80%; height: 40%; border-radius: 9999px; background-color: rgba(75, 85, 99, 0.2); display: flex; }
 
 .home__project-content { padding: 1.5rem; }
 .home__project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }

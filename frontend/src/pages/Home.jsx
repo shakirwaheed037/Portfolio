@@ -205,11 +205,11 @@ const Home = ({ onHireMeClick }) => {
 
                         {/* Project 2 */}
                         <div className="home__project-card hover-scale">
-                            <div className="home__project-image home__project-image--bg3">
-                                <div className="home__project-orb">
+                           <div className="home__project-image home__project-image--bg2">
+                                <div className="home__project-dashbg">
                                     <img
                                         src={fyp}
-                                        alt="interns platform"
+                                        alt="Interns web platform image"
                                     />
                                 </div>
                             </div>
@@ -224,12 +224,13 @@ const Home = ({ onHireMeClick }) => {
                         </div>
                         {/* Project 3*/}
                         <div className="home__project-card hover-scale">
-                            <div className="home__project-image home__project-image--bg1">
-                                <div className="home__project-image-gradient"></div>
-                                <img
-                                    src={smartshop}
-                                    alt="techcourses web platform image"
-                                />
+                        <div className="home__project-image home__project-image--bg2">
+                                <div className="home__project-dashbg">
+                                    <img
+                                        src={smartshop}
+                                        alt="Smart Shopkeeper image"
+                                    />
+                                </div>
                             </div>
                             <div className="home__project-content">
                                 <div className="home__project-tags">

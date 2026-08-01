@@ -73,7 +73,7 @@ const Projects = () => {
       footerText: "React.js, Tailwind CSS",
       footerIcon: Layout,
       iconColor: "text-blue-500",
-      image: smartshopkeeper,
+      image: smartshop,
       githubUrl: "https://github.com/shakirwaheed037/smart-shopkeeper.git",
       liveUrl: "https://smart-shopkeeper-blue.vercel.app/",
     },
