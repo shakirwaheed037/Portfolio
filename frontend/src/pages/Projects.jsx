@@ -7,6 +7,7 @@ import fyp from "../assets/projects/fyp.png";
 import Techcourses from "../assets/projects/Techcourses.jpg";
 import hostpital from "../assets/projects/hostpital.png";
 import urlshortener from "../assets/projects/urlshortener.png";
+import smartshop from "../assets/projects/smartshop.png";
 import movieapp from "../assets/projects/movieapp.png";
 import SmartEstate from "../assets/projects/SmartEstate.png";
 import {
