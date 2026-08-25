@@ -12,6 +12,7 @@ import { useState, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import TechBackground from './components/TechBackground';
 import Loader from './components/Loader';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,6 +51,7 @@ function App() {
 
       <Footer />
       <HireMeModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Analytics />
     </div>
   );
 }
