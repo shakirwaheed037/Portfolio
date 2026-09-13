@@ -10,6 +10,7 @@ import urlshortener from "../assets/projects/urlshortener.png";
 import smartshop from "../assets/projects/smartshop.png";
 import movieapp from "../assets/projects/movieapp.png";
 import SmartEstate from "../assets/projects/SmartEstate.png";
+import scmsproject from "../assets/projects/scmsproject.png";
 import {
   Search,
   ExternalLink,
@@ -27,6 +28,7 @@ import {
   Clock,
   Link,
   Film,
+  GraduationCap,
 } from "lucide-react";
 import AnimatedSection from "../components/AnimatedSection";
 import Magnetic from "../components/Magnetic";
@@ -55,7 +57,7 @@ const Projects = () => {
       title: "SmartEstate AI – Intelligent Real Estate Platform",
       description:
         "A production-ready full-stack real estate platform built with Next.js, MongoDB, and Tailwind CSS. It enables users to buy, rent, and manage properties through intelligent search, verified listings, role-based dashboards, appointment booking, and responsive user experiences.",
-      badges: ["Next.js", "MongoDB", "Full Stack"],
+      badges: ["Backend", "Next.js", "Full Stack"],
       footerText: "Next.js • MongoDB • Tailwind CSS",
       footerIcon: Building,
       iconColor: "text-blue-500",
@@ -78,9 +80,22 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/smart-shopkeeper.git",
       liveUrl: "https://smart-shopkeeper-blue.vercel.app/",
     },
-
     {
       id: 4,
+      title: "School & College Management System",
+      description:
+        "A scalable education management platform designed for Admins, Teachers, and Students, featuring attendance, fees, assignments, exams, results, timetables, study materials, notices, reports, and role-based access.",
+      badges: ["MERN", "RBAC", "EDTECH"],
+      footerText: "React, Node.js, Express, MongoDB",
+      footerIcon: GraduationCap,
+      iconColor: "text-blue-500",
+      image: scmsproject,
+      githubUrl: "YOUR_GITHUB_REPOSITORY_URL",
+      liveUrl: "YOUR_LIVE_DEPLOYED_URL",
+    },
+
+    {
+      id: 5,
       title: "Tech Courses Web Platform",
       description:
         "A full-stack course platform with authentication, role-based access, course management, and image uploads.",
@@ -92,7 +107,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/Tech-Courses-Web-Platform",
     },
     {
-      id: 5,
+      id: 6,
       title: "Hospital Appointment Management Web",
       description:
         "A responsive hospital website where patients can view doctors and schedule appointments easily.",
@@ -104,7 +119,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/hospitalManagementWebsite",
     },
     {
-      id: 6,
+      id: 7,
       title: "URL Shortener",
       description:
         "A MERN-based tool that converts long URLs into short links with copy functionality and click tracking.",
@@ -116,7 +131,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/URL-Shortener",
     },
     {
-      id: 7,
+      id: 8,
       title: "Advanced Age Calculator",
       description:
         "A React application that calculates age in years, months, days, and hours with accurate input validation.",
@@ -128,7 +143,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/Age-Calculater",
     },
     {
-      id: 8,
+      id: 9,
       title: "Movie Search App",
       description:
         "A React movie explorer that fetches data from a movie API to search, view details, and save favorites.",
@@ -140,7 +155,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/Movie-App",
     },
     {
-      id: 9,
+      id: 10,
       title: "React Todo App",
       description:
         "A simple React task manager where users can add, delete, and manage daily tasks using dynamic state updates.",
@@ -152,7 +167,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/Todo-app-with-react.js",
     },
     {
-      id: 10,
+      id: 11,
       title: "React Calculator",
       description:
         "A responsive calculator built with React that performs basic arithmetic operations using dynamic state handling.",
