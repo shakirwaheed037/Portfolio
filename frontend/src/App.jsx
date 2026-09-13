@@ -12,6 +12,8 @@ import { useState, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import TechBackground from './components/TechBackground';
 import Loader from './components/Loader';
+import ParticleBackground from './components/ParticleBackground';
+import Education from './pages/Education';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,6 +36,7 @@ function App() {
     <div className="app-container">
       {/* Dynamic Background */}
       <TechBackground />
+      <ParticleBackground />
       <ScrollToTop />
       <Navbar onHireMeClick={() => setIsModalOpen(true)} />
 
@@ -44,6 +47,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/education" element={<Education />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

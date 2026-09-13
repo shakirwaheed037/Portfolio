@@ -105,3 +105,11 @@
 .footer__legal-link:hover {
   color: var(--text-primary);
 }
+
+/* ========== Light Theme Overrides ========== */
+[data-theme="light"] .footer {
+  border-color: var(--border-color);
+  background-color: #f8fafc;
+}
+[data-theme="light"] .footer__logo-img { filter: invert(1); }
+[data-theme="light"] .footer__bottom { border-color: var(--border-color); }

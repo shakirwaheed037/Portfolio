@@ -31,7 +31,7 @@
 .modal-header {
   position: relative;
   height: 8rem; /* h-32 */
-  background-color: rgba(0, 123, 255, 0.1); /* primary/10 */
+  background-color: rgba(16, 185, 129, 0.1); /* primary/10 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@
 .modal-header-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, rgba(0, 123, 255, 0.2), transparent);
+  background: linear-gradient(to bottom right, rgba(16, 185, 129, 0.2), transparent);
 }
 
 .modal-header-text-container {
@@ -163,7 +163,7 @@ textarea.form-input {
   border-radius: 0.75rem; /* rounded-xl */
   cursor: pointer;
   transition: background-color 0.2s, opacity 0.2s;
-  box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.25);
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,4 +194,19 @@ textarea.form-input {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* ========== Light Theme Overrides ========== */
+[data-theme="light"] .modal-backdrop { background-color: rgba(0, 0, 0, 0.5); }
+[data-theme="light"] .modal-content {
+  background-color: #ffffff;
+  border-color: var(--border-color);
+}
+[data-theme="light"] .modal-header { border-color: var(--border-color); }
+[data-theme="light"] .modal-close-btn:hover { background-color: rgba(0, 0, 0, 0.05); }
+[data-theme="light"] .form-label { color: var(--text-secondary); }
+[data-theme="light"] .form-input {
+  background-color: #f8fafc;
+  border-color: var(--border-color);
+  color: var(--text-primary);
 }

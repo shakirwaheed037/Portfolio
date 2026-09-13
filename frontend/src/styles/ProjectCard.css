@@ -10,7 +10,7 @@
 }
 
 .project-card:hover {
-  border-color: rgba(0, 123, 255, 0.5); /* primary/50 */
+  border-color: rgba(16, 185, 129, 0.5); /* primary/50 */
 }
 
 .project-card__image-container {
@@ -70,7 +70,7 @@
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 500;
-  background-color: rgba(0, 123, 255, 0.1);
+  background-color: rgba(16, 185, 129, 0.1);
   color: var(--primary-color);
   border-radius: 9999px;
   transition: background-color 0.2s;

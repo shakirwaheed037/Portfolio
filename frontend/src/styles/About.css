@@ -36,7 +36,7 @@
   align-items: center;
   font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 3rem;
+  margin: 3rem 0rem 2rem;
 }
 
 .about__breadcrumb-link {
@@ -192,7 +192,7 @@
 .about__bio-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--bg-color), transparent, rgba(0, 123, 255, 0.1));
+  background: linear-gradient(to top, var(--bg-color), transparent, rgba(16, 185, 129, 0.1));
   opacity: 0.6;
 }
 
@@ -227,12 +227,12 @@
   width: 3rem;
   height: 3rem;
   border-radius: 0.75rem;
-  background-color: rgba(0, 123, 255, 0.2);
+  background-color: rgba(16, 185, 129, 0.2);
   display: flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(0, 123, 255, 0.3);
+  border: 1px solid rgba(16, 185, 129, 0.3);
 }
 .about__bio-badge-icon svg { width: 1.25rem; height: 1.25rem; color: var(--primary-color); }
 
@@ -282,7 +282,7 @@
   padding: 1.25rem;
   transition: border-color 0.2s;
 }
-.about__skill-card:hover { border-color: rgba(0, 123, 255, 0.2); }
+.about__skill-card:hover { border-color: rgba(16, 185, 129, 0.2); }
 
 .about__skill-header {
   display: flex;
@@ -338,7 +338,7 @@
   width: 6rem; height: 6rem;
   border-radius: 1rem;
   overflow: hidden;
-  border: 4px solid rgba(0, 123, 255, 0.4);
+  border: 4px solid rgba(16, 185, 129, 0.4);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
@@ -465,16 +465,51 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 25px -5px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
 }
 
 .about__cv-download-btn:hover {
   background-color: var(--primary-hover);
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 20px 30px -5px rgba(0, 123, 255, 0.6);
+  box-shadow: 0 20px 30px -5px rgba(16, 185, 129, 0.6);
 }
 
 .about__cv-download-btn svg {
   width: 1.25rem;
   height: 1.25rem;
 }
+
+/* ========== Light Theme Overrides ========== */
+[data-theme="light"] .about__breadcrumb-link { color: var(--text-secondary); }
+[data-theme="light"] .about__breadcrumb-link:hover { color: var(--text-primary); }
+[data-theme="light"] .about__breadcrumb-sep { color: #9ca3af; }
+[data-theme="light"] .about__breadcrumb-current { color: var(--text-primary); }
+
+[data-theme="light"] .about__bio-title { color: var(--text-primary); }
+[data-theme="light"] .about__bio-paragraphs { color: var(--text-secondary); }
+
+[data-theme="light"] .about__skill-pill {
+  background-color: #f1f5f9;
+  border-color: var(--border-color);
+}
+[data-theme="light"] .about__skill-pill:hover { border-color: #cbd5e1; }
+[data-theme="light"] .about__skill-pill-text { color: var(--text-primary); }
+
+[data-theme="light"] .about__bio-card {
+  background-color: #f1f5f9;
+  border-color: var(--border-color);
+}
+[data-theme="light"] .about__bio-floating-badge {
+  background: var(--backdrop-bg);
+  border-color: var(--border-color);
+}
+[data-theme="light"] .about__bio-badge-text-bottom { color: var(--text-primary); }
+[data-theme="light"] .about__bio-badge-text-top { color: var(--text-secondary); }
+
+[data-theme="light"] .about__skills-title { color: var(--text-primary); }
+[data-theme="light"] .about__skill-card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+[data-theme="light"] .about__skill-name { color: var(--text-primary); }
+[data-theme="light"] .about__skill-bar-bg { background-color: #e2e8f0; }

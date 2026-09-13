@@ -35,7 +35,7 @@
   right: 0;
   width: 500px;
   height: 500px;
-  background-color: rgba(0, 123, 255, 0.2);
+  background-color: rgba(16, 185, 129, 0.2);
   border-radius: 9999px;
   filter: blur(120px);
   z-index: -10;
@@ -63,8 +63,8 @@
   display: inline-block;
   padding: 0.375rem 1rem;
   border-radius: 9999px;
-  border: 1px solid rgba(0, 123, 255, 0.3);
-  background-color: rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  background-color: rgba(16, 185, 129, 0.1);
   color: var(--primary-color);
   font-size: 0.75rem;
   font-weight: 600;
@@ -113,7 +113,7 @@
   color: white;
   font-weight: 500;
   transition: background-color 0.2s;
-  box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2);
   width: 100%;
   text-decoration: none;
   border: none;
@@ -149,38 +149,18 @@
 }
 @media (min-width: 1024px) { .home__hero-image-wrapper { justify-content: flex-end; } }
 
-.home__hero-card {
-  position: relative;
-  width: 100%;
-  max-width: 28rem;
-  padding: 1rem;
-  padding-bottom: 5rem;
-  border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  background: var(--backdrop-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  animation: heartbeat 3s infinite ease-in-out;
-}
 
-.home__hero-card-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top right, rgba(0, 123, 255, 0.1), transparent);
-  pointer-events: none;
-}
 
 .home__hero-image-inner {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   width: 100%;
   background-color: #1c2436;
-  border-radius: 1.5rem;
+  border-radius: 50%;
   overflow: hidden;
-  margin-bottom: -4rem;
+  margin-bottom: 1rem;
   position: relative;
   z-index: 10;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.2);
 }
 
 .home__hero-img {
@@ -378,7 +358,7 @@
 .home__vision-card {
   padding: 2rem;
   border-radius: 1rem;
-  background-color: #161d2b;
+  background-color: #141824;
   border: 1px solid rgba(255, 255, 255, 0.05);
   height: 100%;
   display: flex;
@@ -387,7 +367,7 @@
 }
 .home__vision-icon-wrap {
   width: 2.5rem; height: 2.5rem; border-radius: 9999px;
-  background-color: rgba(0, 123, 255, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;
+  background-color: rgba(16, 185, 129, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;
 }
 .home__vision-icon-dot { width: 0.75rem; height: 0.75rem; background-color: var(--primary-color); border-radius: 9999px; }
 .home__vision-card h3 { font-size: 1.25rem; font-weight: 700; color: white; margin-bottom: 1rem; }
@@ -424,7 +404,7 @@
 
 .home__project-card {
   border-radius: 1rem;
-  background-color: #161d2b;
+  background-color: #141824;
   border: 1px solid rgba(255, 255, 255, 0.05);
   overflow: hidden;
   transition: all 0.3s;
@@ -450,7 +430,7 @@
 .home__project-tag {
   padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 600; border-radius: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em;
 }
-.home__project-tag--primary { background-color: rgba(0, 123, 255, 0.2); color: var(--primary-color); }
+.home__project-tag--primary { background-color: rgba(16, 185, 129, 0.2); color: var(--primary-color); }
 .home__project-tag--secondary { background-color: rgba(255, 255, 255, 0.05); color: #d1d5db; border: 1px solid rgba(255, 255, 255, 0.1); }
 .home__project-title { font-size: 1.25rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
 .home__project-desc { color: var(--text-secondary); font-size: 0.875rem; }
@@ -471,7 +451,7 @@
 @media (min-width: 1024px) { .home__achievements-grid { grid-template-columns: repeat(4, 1fr); } }
 
 .home__achievement-card {
-  background-color: #161d2b;
+  background-color: #141824;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
   padding: 2rem;
@@ -482,7 +462,7 @@
 }
 
 .home__achievement-icon-wrapper {
-  width: 3rem; height: 3rem; border-radius: 9999px; background-color: rgba(0, 123, 255, 0.1);
+  width: 3rem; height: 3rem; border-radius: 9999px; background-color: rgba(16, 185, 129, 0.1);
   display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;
   color: var(--primary-color);
 }
@@ -516,7 +496,7 @@
 @media (min-width: 768px) { .home__services-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .home__service-card {
-  background-color: #161d2b;
+  background-color: #141824;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
   padding: 2rem;
@@ -529,7 +509,7 @@
 .home__service-icon-wrapper {
   width: 3rem; height: 3rem; border-radius: 0.75rem; background-color: var(--primary-color);
   display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.2); color: white; font-weight: 700;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2); color: white; font-weight: 700;
 }
 .home__service-icon-wrapper svg { width: 1.5rem; height: 1.5rem; color: white; }
 .home__service-icon-text { color: white; font-weight: 700; font-family: monospace; }
@@ -547,7 +527,7 @@
 .home__contact-glow {
   position: absolute;
   top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: 600px; height: 300px; background-color: rgba(0, 123, 255, 0.1);
+  width: 600px; height: 300px; background-color: rgba(16, 185, 129, 0.1);
   border-radius: 9999px; filter: blur(100px); pointer-events: none;
 }
 
@@ -587,8 +567,81 @@ textarea.home__contact-input { resize: none; }
 
 .home__contact-submit {
   width: 100%; background-color: var(--primary-color); color: white; font-weight: 700;
-  padding: 1.25rem; border-radius: 1rem; transition: all 0.3s; box-shadow: 0 20px 25px -5px rgba(0, 123, 255, 0.2);
+  padding: 1.25rem; border-radius: 1rem; transition: all 0.3s; box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.2);
   display: flex; align-items: center; justify-content: center; gap: 0.75rem; border: none; cursor: pointer; font-size: 1rem;
 }
 .home__contact-submit:hover { background-color: var(--primary-hover); }
 .home__contact-submit svg { width: 1.25rem; height: 1.25rem; }
+
+/* Light Theme Overrides */
+[data-theme="light"] .home__hero-image-inner,
+[data-theme="light"] .home__stat-card,
+[data-theme="light"] .home__vision-card,
+[data-theme="light"] .home__project-card,
+[data-theme="light"] .home__achievement-card,
+[data-theme="light"] .home__service-card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="light"] .home__about-link,
+[data-theme="light"] .home__achievements-btn {
+  background-color: #f1f5f9;
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="light"] .home__about-link:hover,
+[data-theme="light"] .home__achievements-btn:hover {
+  background-color: #e2e8f0;
+}
+
+[data-theme="light"] .home__contact-input {
+  background-color: #f8fafc;
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="light"] .home__btn-secondary {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--text-secondary);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+[data-theme="light"] .home__stat-number{
+  color: var(--text-secondary);
+  
+}
+[data-theme="light"] .home__about-title{
+  color: var(--text-secondary); 
+}
+[data-theme="light"] .home__btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+[data-theme="light"] h3{
+  color: var(--text-secondary); 
+}
+[data-theme="light"] h2{
+  color: var(--text-secondary); 
+}
+
+[data-theme="light"] .home__hero-card,
+[data-theme="light"] .home__contact-card {
+  background: var(--backdrop-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="light"] .home__hero-floating-badge {
+  background: var(--backdrop-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="light"] .home__hero-badge-text-bottom {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .home__project-image--bg1,
+[data-theme="light"] .home__project-image--bg2,
+[data-theme="light"] .home__project-image--bg3 {
+  background-color: #f1f5f9;
+}

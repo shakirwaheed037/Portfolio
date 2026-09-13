@@ -2,6 +2,7 @@ import { useState } from 'react';
 import whitelogo from '../assets/images/whitelogo.png';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 import '../styles/Navbar.css';
 
 const Navbar = ({ onHireMeClick }) => {
@@ -14,6 +15,7 @@ const Navbar = ({ onHireMeClick }) => {
         { name: 'Projects', path: '/projects' },
         { name: 'Achievements', path: '/achievements' },
         { name: 'Experience', path: '/experience' },
+        { name: 'Education', path: '/education' },
     ];
 
     return (
@@ -54,6 +56,8 @@ const Navbar = ({ onHireMeClick }) => {
                             </Link>
                         ))}
 
+                        <ThemeToggle />
+
                         {/* get in touch Button */}
                         <Link to="/contact">
                             <button
@@ -66,6 +70,7 @@ const Navbar = ({ onHireMeClick }) => {
 
                     {/* Mobile Menu Button */}
                     <div className="navbar__mobile-btn-container">
+                        <ThemeToggle />
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="navbar__mobile-btn"

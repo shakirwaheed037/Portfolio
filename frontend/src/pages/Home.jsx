@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import AnimatedSection from '../components/AnimatedSection';
 import Achievements from "../pages/Achievements.jsx";
-import myimage from '../assets/images/myimage.png';
+import myimage from '../assets/images/myimage.jpg';
 import SmartEstate from '../assets/projects/SmartEstate.png';
 import smartshop from '../assets/projects/smartshop.png';
 import fyp from '../assets/projects/fyp.png';
@@ -71,8 +71,7 @@ const Home = ({ onHireMeClick }) => {
                     </div>
 
                     <div className="home__hero-image-wrapper">
-                        <div className="home__hero-card">
-                            <div className="home__hero-card-gradient"></div>
+                       
                             <div className="home__hero-image-inner">
                                 <img
                                     src={myimage}
@@ -90,7 +89,6 @@ const Home = ({ onHireMeClick }) => {
                                     <span className="home__hero-badge-text-bottom">MERN Stack Builder</span>
                                 </div>
                             </div>
-                        </div>
                     </div>
 
                 </div>

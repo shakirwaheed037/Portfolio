@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import myimage from '../assets/images/myimage.png';
+import myimage from '../assets/images/myimage.jpg';
 import AnimatedSection from '../components/AnimatedSection';
 import '../styles/About.css';
 
