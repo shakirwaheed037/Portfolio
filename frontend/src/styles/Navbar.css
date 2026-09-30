@@ -44,7 +44,7 @@
   left: 15%;
   right: 15%;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(0, 123, 255, 0.65) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(8, 211, 25, 0.65) 50%, transparent 100%);
   border-radius: 9999px;
   pointer-events: none;
 }
@@ -59,7 +59,7 @@
 }
 
 [data-theme="light"] .navbar__dock::before {
-  background: linear-gradient(90deg, transparent 0%, rgba(0, 123, 255, 0.45) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(6, 186, 45, 0.45) 50%, transparent 100%);
 }
 
 /* Bottom edge blue highlight */
@@ -75,7 +75,7 @@
 
   background: linear-gradient(90deg,
       transparent 0%,
-      rgba(0, 123, 255, 0.65) 50%,
+      rgba(11, 212, 24, 0.65) 50%,
       transparent 100%);
 
   border-radius: 9999px;
