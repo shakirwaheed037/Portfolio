@@ -311,172 +311,199 @@
   width: var(--skill-percent);
 }
 
-/* -- CV Preview -- */
-.about__cv-container {
-  background-color: white;
+/* ==================================================
+   Curriculum Vitae PDF Viewer Section
+   ================================================== */
+
+.about__pdf-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 1.5rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  max-width: 56rem;
+  max-width: 68rem;
   margin-left: auto;
   margin-right: auto;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.about__cv-header {
-  background-color: #0d131f;
-  padding: 2.5rem;
+[data-theme="light"] .about__pdf-container {
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.08);
+}
+
+.about__pdf-header {
+  padding: 2rem 2.5rem;
+  background-color: rgba(13, 19, 31, 0.6);
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
   align-items: flex-start;
-  gap: 2rem;
-}
-@media (min-width: 640px) {
-  .about__cv-header { flex-direction: row; align-items: center; padding: 3.5rem; }
-}
-
-.about__cv-avatar {
-  width: 6rem; height: 6rem;
-  border-radius: 1rem;
-  overflow: hidden;
-  border: 4px solid rgba(16, 185, 129, 0.4);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
-}
-.about__cv-avatar img { width: 100%; height: 100%; object-fit: cover; }
-
-.about__cv-title { font-size: 1.875rem; font-weight: 900; color: white; letter-spacing: -0.025em; margin-bottom: 0.25rem; }
-.about__cv-subtitle { color: var(--primary-color); font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
-
-.about__cv-contact {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 1.5rem;
-  row-gap: 0.25rem;
-  color: #9ca3af;
-  font-size: 0.875rem;
-}
-.about__cv-contact a { color: inherit; text-decoration: none; transition: color 0.2s; }
-.about__cv-contact a:hover { color: var(--primary-color); }
-
-.about__cv-body {
-  padding: 2.5rem;
-}
-@media (min-width: 640px) { .about__cv-body { padding: 3.5rem; } }
-
-.about__cv-section { margin-bottom: 3rem; }
-.about__cv-section:last-child { margin-bottom: 0; }
-
-.about__cv-section-title {
-  font-size: 0.875rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #0f172a; /* slate-900 */
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.about__cv-section-line { width: 2.5rem; height: 3px; background-color: var(--primary-color); display: inline-block; }
-
-/* Skills inner grid */
-.about__cv-skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-@media (min-width: 640px) { .about__cv-skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-
-.about__cv-skill-item {
-  display: flex; align-items: center; gap: 0.5rem; color: #334155; font-size: 0.875rem;
-}
-.about__cv-skill-dot { width: 0.375rem; height: 0.375rem; border-radius: 9999px; background-color: var(--primary-color); flex-shrink: 0; }
-
-/* Languages list */
-.about__cv-langs { display: flex; flex-direction: column; gap: 0.75rem; }
-.about__cv-lang-item { display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; }
-.about__cv-lang-name { font-weight: 700; color: #1e293b; }
-.about__cv-lang-level { color: #64748b; font-weight: 500; font-style: italic; }
-
-/* Timeline block */
-.about__cv-timeline-layer { display: flex; flex-direction: column; gap: 2.5rem; }
-
-.about__cv-timeline-item {
-  position: relative;
-  padding-left: 2rem;
-  border-left: 2px solid #f1f5f9;
-}
-.about__cv-timeline-dot {
-  position: absolute;
-  left: -9px;
-  top: 0;
-  width: 1rem; height: 1rem; background-color: var(--primary-color); border-radius: 9999px;
-  border: 4px solid white; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
-
-.about__cv-timeline-header {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.5rem;
-}
-@media (min-width: 768px) {
-  .about__cv-timeline-header { flex-direction: row; justify-content: space-between; }
-}
-
-.about__cv-timeline-title { font-weight: 700; color: #0f172a; font-size: 1.25rem; }
-.about__cv-timeline-date { color: var(--primary-color); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.05em; margin-top: 0.25rem; }
-@media (min-width: 768px) { .about__cv-timeline-date { margin-top: 0.25rem; } }
-
-.about__cv-timeline-org { color: #94a3b8; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.1em; }
-.about__cv-timeline-list { color: #475569; font-size: 0.9375rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: none; padding: 0; margin: 0; }
-.about__cv-timeline-list li { display: flex; gap: 0.75rem; }
-.about__cv-timeline-bullet { color: var(--primary-color); margin-top: 0.25rem; }
-.about__cv-timeline-text { color: #475569; line-height: 1.625; max-width: 42rem; }
-
-.about__cv-footer {
-  padding-top: 2.5rem;
-  border-top: 1px solid #f1f5f9;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  opacity: 0.4;
 }
-.about__cv-footer-left { font-size: 0.625rem; font-weight: 700; letter-spacing: 0.2em; color: #94a3b8; text-transform: uppercase; }
-.about__cv-footer-right { font-size: 0.625rem; font-weight: 900; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.1em; }
 
-/* -- CV Download Section -- */
-.about__cv-download-section {
+[data-theme="light"] .about__pdf-header {
+  background-color: rgba(248, 250, 252, 0.8);
+}
+
+@media (min-width: 768px) {
+  .about__pdf-header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.about__pdf-badge {
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.about__pdf-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.about__pdf-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.about__pdf-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  flex-wrap: wrap;
+}
+
+.about__pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.about__pdf-btn--primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 20px -4px rgba(0, 123, 255, 0.4);
+}
+
+.about__pdf-btn--primary:hover {
+  background-color: var(--primary-hover);
+  color: #ffffff;
+  box-shadow: 0 12px 25px -4px rgba(0, 123, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.about__pdf-btn--secondary {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .about__pdf-btn--secondary {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.about__pdf-btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+[data-theme="light"] .about__pdf-btn--secondary:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* PDF Viewer Frame */
+.about__pdf-viewer-wrapper {
+  width: 100%;
+  position: relative;
+  background-color: #525659;
   display: flex;
   justify-content: center;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
-
-.about__cv-download-btn {
-  display: flex;
   align-items: center;
-  gap: 0.75rem;
-  background-color: var(--primary-color);
-  color: white;
+}
+
+[data-theme="light"] .about__pdf-viewer-wrapper {
+  background-color: #e2e8f0;
+}
+
+.about__pdf-viewer {
+  width: 100%;
+  height: 850px;
   border: none;
-  padding: 1rem 2.5rem;
-  border-radius: 9999px;
+  display: block;
+}
+
+@media (max-width: 1023px) {
+  .about__pdf-viewer {
+    height: 700px;
+  }
+}
+
+@media (max-width: 639px) {
+  .about__pdf-viewer {
+    height: 520px;
+  }
+}
+
+/* Fallback for devices/browsers that do not display inline objects */
+.about__pdf-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  width: 100%;
+}
+
+.about__pdf-fallback-icon {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.about__pdf-fallback-title {
+  font-size: 1.25rem;
   font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
 }
 
-.about__cv-download-btn:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 20px 30px -5px rgba(16, 185, 129, 0.6);
+.about__pdf-fallback-text {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  max-width: 28rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
-.about__cv-download-btn svg {
-  width: 1.25rem;
-  height: 1.25rem;
+.about__pdf-fallback-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* ========== Light Theme Overrides ========== */

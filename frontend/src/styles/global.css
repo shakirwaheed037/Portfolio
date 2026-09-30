@@ -20,6 +20,7 @@
   --text-secondary: #9ca3af; /* Tailwind text-gray-400 equivalent */
   --text-muted: #6b7280;     /* Tailwind text-gray-500 equivalent */
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Cascadia Code', monospace;
   --backdrop-bg: rgba(21, 28, 39, 0.8);
   --border-radius-sm: 0.375rem;
   --border-radius-md: 0.5rem;
@@ -63,6 +64,7 @@ body {
   overflow-x: hidden;
   background: var(--bg-gradient);
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  padding-bottom: 5.5rem;
 }
 
 ::selection {
@@ -74,6 +76,12 @@ body {
 .app-container {
   min-height: 100vh;
   position: relative;
+  padding-bottom: 1rem;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 .glass-effect {
@@ -114,62 +122,82 @@ button:active, .btn-link:active {
   transform: translateY(-1px) scale(0.98);
 }
 
-/* Print Optimization for CV Download */
-@media print {
-  nav, 
-  footer, 
-  .no-print,
-  button,
-  .inline-flex,
-  .Magnetic,
-  #cv-preview-container ~ *, 
-  .breadcrumbs {
-    display: none !important;
-  }
 
-  body {
-    background: white !important;
-    color: black !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-  }
+/* Developer-style coding typography hierarchy */
 
-  #cv-preview-container {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-    z-index: 9999 !important;
-  }
+/* Main Hero Heading - Strongest coding font treatment */
+.home__hero-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
 
-  .min-h-screen, .pt-24, .pb-20, h1, p, .pt-8 {
-    padding: 0 !important;
-    min-height: auto !important;
-  }
+/* Section Headings - Medium/strong coding typography */
+.about__bio-title,
+.projects__header-title,
+.achievements__header-title,
+.experience__hero-title,
+.contact__header-title,
+.education__title,
+.home__about-title,
+.home__projects-title,
+.home__achievements-title,
+.home__services-title,
+.home__contact-title,
+.about__skills-title,
+.achievements__cta-title,
+.experience__section-title,
+.experience__cta-title,
+.achievements__cert-title,
+.project-card__title,
+.modal-title,
+.about__cv-title,
+.about__cv-section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
 
-  main > div > div:has(#cv-preview-container), main, #root, html {
-    display: block !important;
-    overflow: visible !important;
-    background: white !important;
-  }
+/* Subheadings & Taglines - Lighter coding typography (like code comments / secondary dev text) */
+.home__hero-subtitle,
+.about__bio-subtitle,
+.projects__subtitle,
+.experience__hero-subtitle,
+.education__subtitle,
+.contact__header-subtitle,
+.home__about-subtitle,
+.home__projects-subtitle,
+.home__achievements-subtitle,
+.home__services-subtitle,
+.about__bio-badge,
+.projects__header-badge-text,
+.achievements__header-badge,
+.modal-subtitle,
+.about__cv-subtitle,
+.achievements__cert-badge,
+.about__bio-badge-text-top,
+.about__bio-badge-text-bottom {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: 0;
+}
 
-  #cv-preview-container {
-    display: block !important;
-    visibility: visible !important;
-    position: static !important;
-  }
-
-  #cv-preview-container * {
-    visibility: visible !important;
-  }
-
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
+/* Buttons - Subtle coding font family */
+button,
+.btn-primary,
+.btn-secondary,
+.btn-link,
+.home__btn-primary,
+.home__btn-secondary,
+.about__breadcrumb-link,
+.about__cv-download-btn,
+.experience__hero-btn,
+.achievements__cta-btn-primary,
+.achievements__category-btn,
+.contact__submit-btn,
+.modal-close-btn,
+.form-submit-btn {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0;
 }

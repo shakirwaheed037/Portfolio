@@ -7,7 +7,6 @@ import SmartEstate from '../assets/projects/SmartEstate.png';
 import smartshop from '../assets/projects/smartshop.png';
 import fyp from '../assets/projects/fyp.png';
 import Magnetic from '../components/Magnetic';
-import TechBackground from '../components/TechBackground';
 // imported icons below
 import Bootstrap from '../assets/icon/Bootstrap.svg';
 import GitHub from '../assets/icon/GitHub.svg';
@@ -18,6 +17,7 @@ import MongoDB from '../assets/icon/MongoDB.svg';
 import Express from '../assets/icon/Express.svg';
 import ReactIcon from '../assets/icon/React.svg';
 import n8n from '../assets/icon/n8n.svg';
+
 
 import '../styles/Home.css';
 
@@ -43,8 +43,9 @@ const Home = ({ onHireMeClick }) => {
 
                 <div className="home__hero-grid">
                     <div>
-                        <div className="home__hero-badge">
-                            AVAILABLE FOR FREELANCE
+                        <div className="home__developer-status">
+                            <span className="status-indicator"></span>
+                            <span className="status-text font-mono">Available for Opportunities</span>
                         </div>
                         <h1 className="home__hero-title">
                             Hi, I'm <span className="text-primary animate-heartbeat" style={{ display: 'inline-block' }}>Shakir Waheed</span>

@@ -10,9 +10,8 @@ import Contact from './pages/Contact';
 import HireMeModal from './components/HireMeModal';
 import { useState, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
-import TechBackground from './components/TechBackground';
+import NeuralNetworkBackground from './components/NeuralNetworkBackground';
 import Loader from './components/Loader';
-import ParticleBackground from './components/ParticleBackground';
 import Education from './pages/Education';
 
 function App() {
@@ -34,9 +33,8 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Dynamic Background */}
-      <TechBackground />
-      <ParticleBackground />
+      {/* Animated Neural Network Background */}
+      <NeuralNetworkBackground />
       <ScrollToTop />
       <Navbar onHireMeClick={() => setIsModalOpen(true)} />
 
