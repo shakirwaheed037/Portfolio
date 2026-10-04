@@ -28,7 +28,7 @@ const Navbar = ({ onHireMeClick }) => {
                 to={link.path}
                 className={`navbar__icon-link ${isActive ? 'navbar__icon-link--active' : ''}`}
                 aria-label={link.name}
-                data-tooltip={link.name === 'Contact' ? 'Get In Touch' : link.name}
+                data-tooltip={link.name}
             >
                 <IconComponent size={19} strokeWidth={isActive ? 2.3 : 1.8} />
             </Link>
@@ -48,7 +48,7 @@ const Navbar = ({ onHireMeClick }) => {
                     </div>
 
                     {/* Centered CBS Logo */}
-                    <Link to="/" className="navbar__logo-link" aria-label="CodeByShakir Home">
+                    <Link to="/" className="navbar__logo-link" aria-label="CodeByShakir Home" data-tooltip="Home">
                         <img
                             src={whitelogo}
                             alt="CBS Logo"
