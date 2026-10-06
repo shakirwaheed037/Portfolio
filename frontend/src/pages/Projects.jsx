@@ -4,6 +4,7 @@ import reacttodoapp from "../assets/projects/reacttodoapp.jpg";
 import reactcalculater from "../assets/projects/reactcalculater.jpg";
 import agecalculater from "../assets/projects/agecalculater.jpg";
 import fyp from "../assets/projects/fyp.png";
+import salesdashboard from "../assets/projects/salesdashboard.png";
 import Techcourses from "../assets/projects/Techcourses.jpg";
 import hostpital from "../assets/projects/hostpital.png";
 import urlshortener from "../assets/projects/urlshortener.png";
@@ -15,6 +16,7 @@ import {
   Search,
   ExternalLink,
   Github,
+  BarChart3,
   ChevronDown,
   Server,
   Layout,
@@ -29,6 +31,7 @@ import {
   Link,
   Film,
   GraduationCap,
+ 
 } from "lucide-react";
 import AnimatedSection from "../components/AnimatedSection";
 import Magnetic from "../components/Magnetic";
@@ -96,6 +99,21 @@ const Projects = () => {
 
     {
       id: 5,
+
+      title: "Superstore Sales Analysis & Executive Dashboard",
+      description:
+        "An interactive Power BI sales analytics project analyzing Superstore data through KPI cards, monthly sales trends, category and sub-category analysis, and interactive customer segment and regional filters.",
+      badges: ["POWER BI", "DATA ANALYTICS"],
+      footerText: "Power BI, Power Query, DAX, Excel",
+      footerIcon: BarChart3,
+      iconColor: "text-blue-500",
+      image: salesdashboard,
+      githubUrl:
+        "https://github.com/shakirwaheed037/superstore-sales-analysis-powerbi",
+    },
+
+    {
+      id: 6,
       title: "Tech Courses Web Platform",
       description:
         "A full-stack course platform with authentication, role-based access, course management, and image uploads.",
@@ -107,7 +125,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/Tech-Courses-Web-Platform",
     },
     {
-      id: 6,
+      id: 7,
       title: "Hospital Appointment Management Web",
       description:
         "A responsive hospital website where patients can view doctors and schedule appointments easily.",
@@ -119,7 +137,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/hospitalManagementWebsite",
     },
     {
-      id: 7,
+      id: 8,
       title: "URL Shortener",
       description:
         "A MERN-based tool that converts long URLs into short links with copy functionality and click tracking.",
@@ -131,7 +149,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/URL-Shortener",
     },
     {
-      id: 8,
+      id: 9,
       title: "Advanced Age Calculator",
       description:
         "A React application that calculates age in years, months, days, and hours with accurate input validation.",
@@ -143,7 +161,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/Age-Calculater",
     },
     {
-      id: 9,
+      id: 10,
       title: "Movie Search App",
       description:
         "A React movie explorer that fetches data from a movie API to search, view details, and save favorites.",
@@ -155,7 +173,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/Movie-App",
     },
     {
-      id: 10,
+      id: 11,
       title: "React Todo App",
       description:
         "A simple React task manager where users can add, delete, and manage daily tasks using dynamic state updates.",
@@ -167,7 +185,7 @@ const Projects = () => {
       githubUrl: "https://github.com/shakirwaheed037/Todo-app-with-react.js",
     },
     {
-      id: 11,
+      id: 12,
       title: "React Calculator",
       description:
         "A responsive calculator built with React that performs basic arithmetic operations using dynamic state handling.",
