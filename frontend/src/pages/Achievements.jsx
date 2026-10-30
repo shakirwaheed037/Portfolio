@@ -8,6 +8,7 @@ import courserareact from '../assets/certificates/courserareact.jpg'
 import laptop from '../assets/images/laptop.png'
 import AnimatedSection from '../components/AnimatedSection';
 import Magnetic from '../components/Magnetic';
+import pakangel from '../assets/certificates/pakangel.png'
 import '../styles/Achievements.css';
 import  from '../assets/certificates/PAGAI-PP-0070.png'
 
