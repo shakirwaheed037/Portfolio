@@ -10,7 +10,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import Magnetic from '../components/Magnetic';
 import pakangel from '../assets/certificates/pakangel.png'
 import '../styles/Achievements.css';
-import  from '../assets/certificates/PAGAI-PP-0070.png'
+
 
 const Achievements = () => {
     const [activeCategory, setActiveCategory] = useState("All Categories");
