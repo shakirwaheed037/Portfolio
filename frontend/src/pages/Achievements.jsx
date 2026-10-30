@@ -9,6 +9,7 @@ import laptop from '../assets/images/laptop.png'
 import AnimatedSection from '../components/AnimatedSection';
 import Magnetic from '../components/Magnetic';
 import '../styles/Achievements.css';
+import  from '../assets/certificates/PAGAI-PP-0070.png'
 
 const Achievements = () => {
     const [activeCategory, setActiveCategory] = useState("All Categories");
@@ -27,13 +28,13 @@ const Achievements = () => {
         },
         {
             id: 2,
-            title: "Backend Devlopment",
-            issuer: "Brandora Software House - kohat pak",
+            title: "Pak Angels Gen AI — Promising Performer",
+            issuer: "Pak Angels Aspire Pakistan",
             date: "Aug 2023",
-            badge: "Brandora",
-            category: "Backend",
-            image: DEP,
-            link: DEP
+            badge: "Pak Angels",
+            category: "Pak Angels",
+            image: PAGAI-PP-0070,
+            link: PAGAI-PP-0070
         },
         {
             id: 3,
