@@ -27,14 +27,14 @@ const Achievements = () => {
             link: pscodercertificate
         },
         {
-            id: 2,
+             id: 2,
             title: "Pak Angels Gen AI — Promising Performer",
             issuer: "Pak Angels Aspire Pakistan",
-            date: "Aug 2023",
+            date: "Aug October 17, 2026",
             badge: "Pak Angels",
             category: "Pak Angels",
-            image: PAGAI-PP-0070,
-            link: PAGAI-PP-0070
+            image: DEP,
+            link: DEP
         },
         {
             id: 3,
