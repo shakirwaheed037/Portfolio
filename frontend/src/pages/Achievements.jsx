@@ -34,8 +34,8 @@ const Achievements = () => {
             date: "Aug October 17, 2026",
             badge: "Pak Angels",
             category: "Pak Angels",
-            image: DEP,
-            link: DEP
+            image: pakangel,
+            link: pakangel
         },
         {
             id: 3,
